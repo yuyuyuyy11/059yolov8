@@ -200,7 +200,8 @@ class YOLOv8:
 
         # Run inference using the preprocessed image data
         outputs = session.run(None, {model_inputs[0].name: img_data})
-
+        print(outputs)
+        
         # Perform post-processing on the outputs to obtain output image.
         return self.postprocess(self.img, outputs)  # output image
 
